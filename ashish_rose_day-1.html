@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Rose Day Ashish ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #ff4b6e, #ff9a9e);
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 42px;
+      text-shadow: 2px 2px #b30047;
+      animation: beat 1.5s infinite;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    p {
+      font-size: 22px;
+      margin: 15px;
+    }
+
+    .heart {
+      font-size: 55px;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    button {
+      background-color: #ff3366;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff99aa;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #cc0052;
+    }
+
+    .rose {
+      position: fixed;
+      top: -40px;
+      font-size: 26px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+
+    .kiss {
+      position: fixed;
+      bottom: 20px;
+      font-size: 40px;
+      animation: float 3s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-80px); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🌹 Happy Rose Day Ashish 🌹</h1>
+  <div class="heart">💖</div>
+
+  <p>
+    Dear Ashish 💕<br><br>
+    Yeh rose sirf tumhare liye hai,<br>
+    kyunki tum meri zindagi ka sabse khoobsurat hissa ho 🌸
+  </p>
+
+  <button onclick="surprise()">Click for Surprise 💌</button>
+
+  <script>
+    function surprise() {
+      alert(
+        "Ashish ❤️\n\n" +
+        "Tum meri smile ka reason ho,\n" +
+        "meri har dua ka jawab ho.\n\n" +
+        "Happy Rose Day 🌹💖"
+      );
+    }
+
+    for (let i = 0; i < 30; i++) {
+      let rose = document.createElement("div");
+      rose.className = "rose";
+      rose.innerHTML = "🌹";
+      rose.style.left = Math.random() * 100 + "vw";
+      rose.style.animationDuration = (3 + Math.random() * 5) + "s";
+      document.body.appendChild(rose);
+    }
+
+    setInterval(() => {
+      let kiss = document.createElement("div");
+      kiss.className = "kiss";
+      kiss.innerHTML = "💋";
+      kiss.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(kiss);
+      setTimeout(() => kiss.remove(), 3000);
+    }, 1200);
+  </script>
+
+</body>
+</html>
